@@ -70,16 +70,14 @@ nav .to-top {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
   z-index: 6;
 }
-nav .to-top div {
-  width: 26.5px;
-  height: 30px;
+
+nav .to-top i {
+  display: inline-block;
   position: absolute;
   inset: 0;
+  width: 26.5px;
+  height: 30px;
   margin: auto;
-  object-fit: contain;
-}
-
-nav .to-top div i {
   font-size: 3rem;
   color: #d35f5f;
 }
@@ -96,15 +94,13 @@ nav .calendar {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
   z-index: 6;
 }
-nav .calendar div {
+
+nav .calendar i {
   width: 26.5px;
   height: 30px;
   position: absolute;
   inset: 0;
   margin: auto;
-}
-
-nav .calendar div i {
   font-size: 3rem;
   color: #4b65b6;
 }
@@ -121,15 +117,13 @@ nav .plus {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
   z-index: 6;
 }
-nav .plus div {
+
+nav .plus i {
   width: 26.5px;
   height: 30px;
   position: absolute;
   inset: 0;
   margin: auto;
-}
-
-nav .plus div i {
   font-size: 3rem;
   color: #4b65b6;
 }
@@ -378,6 +372,13 @@ footer a {
     font-size: 1.5rem;
   }
 }
+
+@media screen and (min-width: 1150px) {
+  aside > div {
+    padding-inline: 40px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   header {
     text-align: start;
