@@ -71,11 +71,12 @@ nav .to-top {
   z-index: 6;
 }
 nav .to-top div {
-  width: 30px;
-  height: 26.25px;
+  width: 26.5px;
+  height: 30px;
   position: absolute;
   inset: 0;
   margin: auto;
+  object-fit: contain;
 }
 
 nav .to-top div i {
@@ -96,8 +97,8 @@ nav .calendar {
   z-index: 6;
 }
 nav .calendar div {
-  width: 30px;
-  height: 26.25px;
+  width: 26.5px;
+  height: 30px;
   position: absolute;
   inset: 0;
   margin: auto;
@@ -121,8 +122,8 @@ nav .plus {
   z-index: 6;
 }
 nav .plus div {
-  width: 30px;
-  height: 26.25px;
+  width: 26.5px;
+  height: 30px;
   position: absolute;
   inset: 0;
   margin: auto;
@@ -138,12 +139,12 @@ nav .plus div i {
     padding-right: 60px;
   }
   nav .calendar {
-    position: absolute;
+    position: fixed;
 
     top: 60px;
   }
   nav .plus {
-    position: absolute;
+    position: fixed;
 
     top: 110px;
   }
