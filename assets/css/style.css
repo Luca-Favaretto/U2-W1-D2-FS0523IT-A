@@ -71,7 +71,7 @@ nav .to-top {
   z-index: 6;
 }
 
-nav .to-top i {
+nav .to-top a {
   display: inline-block;
   position: absolute;
   inset: 0;
@@ -80,6 +80,7 @@ nav .to-top i {
   margin: auto;
   font-size: 3rem;
   color: #d35f5f;
+  text-decoration: none;
 }
 
 nav .calendar {
