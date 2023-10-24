@@ -34,6 +34,7 @@ header {
   padding: 2em 1.5em;
   position: sticky;
   top: 0;
+  z-index: 9;
 }
 header div img {
   margin-bottom: 20px;
@@ -55,6 +56,98 @@ header nav li a::before {
   content: "\22c6\0020";
 }
 
+/* NAV */
+
+nav .to-top {
+  position: fixed;
+  right: 6px;
+  bottom: 15px;
+  width: 4rem;
+  height: 4rem;
+  border: 2px white solid;
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+  z-index: 6;
+}
+nav .to-top div {
+  width: 30px;
+  height: 26.25px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+nav .to-top div i {
+  font-size: 3rem;
+  color: #d35f5f;
+}
+
+nav .calendar {
+  position: fixed;
+  right: 6px;
+  bottom: 65px;
+  width: 4rem;
+  height: 4rem;
+  border: 2px white solid;
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+  z-index: 6;
+}
+nav .calendar div {
+  width: 30px;
+  height: 26.25px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+nav .calendar div i {
+  font-size: 3rem;
+  color: #4b65b6;
+}
+
+nav .plus {
+  position: fixed;
+  right: 6px;
+  bottom: 115px;
+  width: 4rem;
+  height: 4rem;
+  border: 2px white solid;
+  background-color: rgba(255, 255, 255, 0.589);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+  z-index: 6;
+}
+nav .plus div {
+  width: 30px;
+  height: 26.25px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+nav .plus div i {
+  font-size: 3rem;
+  color: #4b65b6;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    padding-right: 60px;
+  }
+  nav .calendar {
+    position: absolute;
+
+    top: 60px;
+  }
+  nav .plus {
+    position: absolute;
+
+    top: 110px;
+  }
+}
 /* MAIN */
 
 main {
@@ -64,16 +157,52 @@ main {
   margin-bottom: 1.5em;
 }
 
-main article img {
+main article img:nth-child(3) {
   box-shadow: rgb(1, 157, 195) 0px 0px 0px 4px,
     rgb(160, 37, 114) 0px 0px 0px 8px;
   width: 4rem;
   float: left;
   margin: 1rem;
 }
+main article h1 span {
+  display: inline-block;
+  position: relative;
+}
+.underline-h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.underline-h1 img {
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (min-width: 768) {
+  .underline-h1 img {
+    top: 13px;
+  }
+}
+
+.section-form {
+  position: relative;
+}
+
+.section-form div {
+  background-color: #a3a3a3;
+  display: inline-block;
+  padding: 0.5rem 1.5rem 0.5rem;
+  position: absolute;
+  border-bottom: 1px solid darkslategray;
+  border-right: 1px solid darkslategray;
+  top: -20px;
+}
+
 section {
   background-color: #e3e3e3;
-  padding: 1em;
+  padding: 2em;
   margin-bottom: 2em;
 }
 section h2 {
@@ -82,7 +211,6 @@ section h2 {
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1em;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -171,6 +299,7 @@ button {
 }
 
 /* ELEMENTI NELL' ASIDE */
+
 aside h2 {
   text-align: center;
   color: #333;
@@ -180,11 +309,20 @@ aside h2 {
   margin-bottom: 1em;
 }
 aside div {
+  position: relative;
   background-color: #e3e3e3;
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
-  padding: 1em;
+  padding: 4em;
 }
+aside div p .fa-tag {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: #cdcdcd;
+  font-size: 6rem;
+}
+
 aside div p:last-child {
   margin-bottom: 0;
   font-size: 0.8em;
@@ -234,7 +372,6 @@ footer a {
   }
   body {
     font-size: 1.5rem;
-    line-height: 3rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -272,7 +409,6 @@ footer a {
   }
   body {
     font-size: 2rem;
-    line-height: 3.5rem;
   }
 
   .frame-form {
